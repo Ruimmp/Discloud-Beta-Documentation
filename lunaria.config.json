@@ -1,4 +1,25 @@
 {
   "$schema": "./node_modules/@lunariajs/core/config.schema.json",
-  "repository": {}
+  "repository": {
+    "name": "Ruimmp/Discloud-Beta-Documentation",
+    "branch": "master",
+    "hosting": "github"
+  },
+  "defaultLocale": {
+    "label": "Português",
+    "lang": "pt"
+  },
+  "locales": [
+    {
+      "label": "English",
+      "lang": "en"
+    }
+  ],
+  "files": [
+    {
+      "location": "src/content/docs/**/*.{md,mdx}",
+      "pattern": "src/content/docs/@lang/@path",
+      "type": "universal"
+    }
+  ]
 }
