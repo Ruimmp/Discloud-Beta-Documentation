@@ -1,18 +1,25 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import lunaria from "@lunariajs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
     starlight({
+      plugins: [
+        lunaria({
+          sync: true,
+          configPath: "./lunaria.config.json",
+        }),
+      ],
       title: "Discloud Docs",
       defaultLocale: "pt",
       locales: {
-        "en": {
+        en: {
           label: "English",
           locale: "en",
         },
-        "pt": {
+        pt: {
           label: "Português",
           locale: "pt",
         },
@@ -33,6 +40,9 @@ export default defineConfig({
         maxHeadingLevel: 3,
       },
       lastUpdated: true,
+      /*       components: {
+        Header: "./src/components/Header.astro",
+      } */
     }),
   ],
 });

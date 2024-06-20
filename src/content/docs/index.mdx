@@ -16,7 +16,7 @@ hero:
       icon: external
 ---
 
-import { Card, CardGrid } from "@astrojs/starlight/components";
+import { LinkCard, Card, CardGrid } from "@astrojs/starlight/components";
 
 ## Next steps
 
@@ -33,4 +33,18 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
   <Card title="Read the docs" icon="open-book">
     Learn more in [the Starlight Docs](https://starlight.astro.build/).
   </Card>
+</CardGrid>
+
+<LinkCard
+  title="Personnalisation de Starlight"
+  description="Apprenez à personnaliser votre site Starlight avec vos propres styles, vos polices et bien plus encore."
+  href="/fr/guides/customization/"
+/>
+
+<CardGrid>
+  <LinkCard
+    title="Création de contenu en Markdown"
+    href="/fr/guides/authoring-content/"
+  />
+  <LinkCard title="Composants" href="/fr/guides/components/" />
 </CardGrid>
